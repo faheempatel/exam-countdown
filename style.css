@@ -1,0 +1,19 @@
+body {
+    background-color: #FF5C5C;
+    color: rgb(255, 128, 128);
+    font-family: quicksand, allerta, lato, helvetica;
+    margin-left: 40px;
+}
+
+h1 {
+    font-size: 142px;
+    margin-bottom: 100px;    
+}
+
+h3 {
+    margin-bottom: -80px;    
+}
+
+#next {
+    color: white;
+}

@@ -1,0 +1,23 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet' type='text/css'>
+</head>
+<% count = 0 %>
+<% @times.each do |exam| %>
+    <% if count == 0 %>
+        <div id="next">
+            <h3><%= "#{exam[0]}" %></h3>
+            <h1>
+                <%= "#{exam[1]}" %>
+                <br />DAYS
+            </h1>
+        </div>
+        <% count += 1 %>
+    <% else %>
+        <h3><%= "#{exam[0]}" %></h3>
+        <h1>
+            <%= "#{exam[1]}" %>
+            <br />DAYS
+        </h1>
+    <% end %>
+<% end %>
