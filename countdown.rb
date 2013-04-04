@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'haml'
-require 'time'
+require 'date'
 
 get '/' do
     @exams = {
