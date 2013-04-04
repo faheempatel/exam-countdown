@@ -4,6 +4,7 @@
     <title>G400 - Exam Countdown</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet' type='text/css'>
+    <meta http-equiv="refresh" content="1800">
 </head>
 <body>
 <% count = 0 %>
@@ -13,7 +14,8 @@
             <h3><%= "#{exam[0]}" %></h3>
             <h1>
                 <%= "#{exam[1]}" %>
-                <br />DAYS
+                <br />
+                DAYS
             </h1>
         </div>
         <% count += 1 %>
@@ -21,7 +23,8 @@
         <h3><%= "#{exam[0]}" %></h3>
         <h1>
             <%= "#{exam[1]}" %>
-            <br />DAYS
+            <br />
+            DAYS
         </h1>
     <% end %>
 <% end %>
