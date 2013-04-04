@@ -42,3 +42,5 @@ def difference(exam_date)
     time = Date.today
     return (exam - time).to_i
 end
+
+run Sinatra::Application.run!

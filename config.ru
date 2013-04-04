@@ -1,2 +1,2 @@
-require './exam-countdown'
-run Sinatra::Application
+require './countdown'
+Sinatra::Application
