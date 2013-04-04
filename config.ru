@@ -1,2 +1,2 @@
-require './main'
+require './exam-countdown'
 run Sinatra::Application
