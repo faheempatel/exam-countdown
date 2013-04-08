@@ -3,30 +3,37 @@
 <head>
     <title>G400 - Exam Countdown</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
     <meta http-equiv="refresh" content="1800">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="js/maps.js"></script>
 </head>
 <body>
-<% count = 0 %>
-<% @times.each do |exam| %>
-    <% if count == 0 %>
-        <div id="next">
-            <h3><%= "#{exam[0]}" %></h3>
-            <h1>
-                <%= "#{exam[1]}" %>
-                <br />
-                DAYS
-            </h1>
-        </div>
-        <% count += 1 %>
-    <% else %>
-        <h3><%= "#{exam[0]}" %></h3>
-        <h1>
-            <%= "#{exam[1]}" %>
-            <br />
-            DAYS
-        </h1>
+    <h2 id="title">Exams Countdown</h2>
+    <% count = 0 %>
+    <% @to_display.each do |exam| %>
+        <% if count == 0 %>
+            <div id="next">
+                <h3><%= "#{exam[0]}" %></h3>
+                <p><%= "#{exam[2]}, #{exam[3]}" %></p>
+                <h1>
+                    <%= "#{exam[1]}" %>
+                    <br />
+                    DAYS
+                </h1>
+            </div>
+            <% count += 1 %>
+        <% else %>
+            <div class="coming-up">
+                <h3><%= "#{exam[0]}" %></h3>
+                <p><%= "#{exam[2]}, #{exam[3]}" %></p>
+                <h1>
+                    <%= "#{exam[1]}" %>
+                    <br />
+                    DAYS
+                </h1>
+            </div>
+        <% end %>
     <% end %>
-<% end %>
 </body>
 </html>

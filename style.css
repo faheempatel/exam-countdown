@@ -1,7 +1,8 @@
 body {
-    background-color: #FF5C5C;
-    color: rgb(255, 128, 128);
-    font-family: quicksand, allerta, lato, helvetica;
+    background-color: rgb(132, 255, 226);
+    color: rgb(81, 211, 190);
+    font-family: quicksand, helvetica, arial, sans-serif;
+    margin-top: 40px;
     margin-left: 40px;
 }
 
@@ -15,5 +16,5 @@ h3 {
 }
 
 #next {
-    color: white;
+    color: rgb(0, 37, 39);
 }

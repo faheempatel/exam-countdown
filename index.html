@@ -4,17 +4,56 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:900|Quicksand:700|Josefin+Sans:700|Allerta' rel='stylesheet' type='text/css'>
 
+<style type="text/css">
+      .map-canvas { 
+            margin: 0 auto;
+            width: 425px;
+            height: 400px;
+            float: right;
+            border: 10px solid;
+      }
+    </style>
+    <script type="text/javascript">
+    function initialize(lon, lat, i) {
+        var latlng = new google.maps.LatLng(lon, lat);
+        var myOptions = {
+        zoom: 17,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+      };
+      var map = new google.maps.Map(document.getElementsByClassName("map-canvas")[i],
+          myOptions);
+      var marker = new google.maps.Marker({
+       position: latlng,
+       title:"Test"
+   });
+    marker.setMap(map)
+    }
+    </script> 
+<script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?sensor=false">
+</script>
+
 </head>
 <body>
     <div id="next">
         <h3>Computer Systems and Networks</h3>
         <h1>42<br />DAYS</h1>
+
+    <div class="map-canvas">
+    </div>
+
+
     </div>
 
     <h3>Procedural Programming</h3>
     <h1>55<br />DAYS</h1>
+        <div class="map-canvas">
+        </div>
 
     <h3>Language and Communication</h3>
     <h1>56<br />DAYS</h1>
+            <script type="text/javascript">initialize(51.523457, -0.086732, 0);</script>
+            <script type="text/javascript">initialize(51.529974, -0.054005, 1);</script>
 </body>
 </html>
