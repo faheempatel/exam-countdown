@@ -1,24 +1,29 @@
 body {
-    background-color: rgb(132, 255, 226);
-    color: rgb(81, 211, 190);
+    background-color: #F1E2CA;
+    color: #010101;
     font-family: quicksand, helvetica, arial, sans-serif;
     text-align: center;
     margin-top: 40px;
     margin-left: 40px;
+    margin-bottom: 40px;
+    border: 10px solid;
 }
 
 h1 {
-    font-size: 142px;
+    font-size: 72px;
     font-weight: 700;
     margin-top: 0px;
     margin-bottom: 100px;
 }
 
 h2 {
+    font-size: 45px;
+    margin-top: 60px;
     margin-bottom: 60px;
 }
 
 h3 {
+    font-size: 28px;
     font-weight: 700;
     margin-bottom: -4px;
 }
@@ -29,14 +34,13 @@ p {
 }
 
 #next {
-    color: rgb(0, 37, 39);
+    color: #E43641;
 }
 
 #coming-up {
 }
 
 #tomorrow {
-    font-size: 100px;
 }
 
 .message {
