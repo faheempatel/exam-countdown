@@ -16,22 +16,37 @@
             <div id="next">
                 <h3><%= "#{exam[0]}" %></h3>
                 <p><%= "#{exam[2]}, #{exam[3]}" %></p>
-                <h1>
-                    <%= "#{exam[1]}" %>
-                    <br />
-                    DAYS
-                </h1>
+
+                <% if exam[1] == 0 %>
+                    <h1><%= "TODAY" %></h1>
+                    <p class="message">Good Luck!</p>
+                <% elsif exam[1] == 1 %>
+                    <h1 id="tomorrow"><%= "TOMORROW" %></h1>
+                    <p class="message">Be sure to sleep well.</p>
+                <% else %>
+                    <h1>
+                        <%= "#{exam[1]}" %>
+                        <br />
+                        DAYS
+                    </h1>
+                <% end %>
             </div>
             <% count += 1 %>
         <% else %>
             <div class="coming-up">
                 <h3><%= "#{exam[0]}" %></h3>
                 <p><%= "#{exam[2]}, #{exam[3]}" %></p>
-                <h1>
-                    <%= "#{exam[1]}" %>
-                    <br />
-                    DAYS
-                </h1>
+                
+                <% if exam[1] == 1 %>
+                    <h1 id="tomorrow"><%= "TOMORROW" %></h1>
+                    <p class="message">Be sure to sleep well.</p>
+                <% else %>
+                    <h1>
+                        <%= "#{exam[1]}" %>
+                        <br />
+                        DAYS
+                    </h1>
+                <% end %>
             </div>
         <% end %>
     <% end %>
