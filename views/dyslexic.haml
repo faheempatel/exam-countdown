@@ -21,7 +21,10 @@
           %h3 
             = "#{exam[0]}"
           %p
-            = "#{exam[2]}, FB 326"
+            - if exam[0] == "Object-Oriented Programming"
+              = "#{exam[2]}, ITL"
+            - else
+              = "#{exam[2]}, FB 326"
 
           - if exam[1] == 0
             %h1 TODAY
@@ -44,10 +47,15 @@
           %h3 
             = "#{exam[0]}"
           %p
-            = "#{exam[2]}, FB 326"
+            - if exam[0] == "Object-Oriented Programming"
+              = "#{exam[2]}, ITL"
+            - else
+              = "#{exam[2]}, FB 326"
+
           - if exam[1] == 1
             %h1 TOMORROW
             %p{:class => "message"} Be sure to sleep well.
+
           - else
             %h1
               = "#{exam[1]}"

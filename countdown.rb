@@ -47,7 +47,7 @@ def info_to_display()
                 'ecs401u' => ["Procedural Programming", "08-05-2013", "10:00","Banc-113"],
                 'ecs404u' => ["Computer Systems and Networks", "01-05-2013", "10:00", "Great Hall"],
                 'ecs407u' => ["Logic and Discrete Structures", "22-05-2013", "10:00","Town Hall"],
-                'ecs414u' => ["Object-Oriented Programming", "20-05-2013", "10:00", "TBA"],
+                'ecs414u' => ["Object-Oriented Programming", "20-05-2013", "10:00", "ITL"],
                 'ecs417u' => ["Fundamentals of Web Technology", "17-05-2013", "10:00", "Banc-113"],
                 'ecs419u' => ["Information Systems Analysis", "13-05-2013", "10:00", "Sports Hall"],
                 'ecs420u' => ["Language and Communication", "21-05-2013", "14:30", "York Hall"]

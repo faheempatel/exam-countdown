@@ -21,11 +21,11 @@
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(236, 236, 236);
     color: rgb(175, 175, 175);
     font-family: 'opendyslexic bold', arial, sans-serif;
-    text-align: center;
     margin: 30px;
+    padding-left: 70px;
     border: 10px solid;
 }
 
