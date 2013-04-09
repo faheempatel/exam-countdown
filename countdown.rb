@@ -33,7 +33,7 @@ get '/' do
     end
     # Sort by days left (fewer first)
     @to_display = @to_display.sort { |a, b| a[1] <=> b[1] }
-    erb :index
+    haml :index
 end
 
 get '/:module' do
