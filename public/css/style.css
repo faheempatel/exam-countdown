@@ -1,6 +1,6 @@
 body {
-    background-color: #F1E2CA;
-    color: #010101;
+    background-color: rgb(255, 255, 255);
+    color: rgb(36, 36, 36);
     font-family: quicksand, helvetica, arial, sans-serif;
     text-align: center;
     margin: 30px;
@@ -32,7 +32,7 @@ p {
 }
 
 #next {
-    color: #E43641;
+    color: #4ad391;
 }
 
 #coming-up {
