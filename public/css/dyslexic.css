@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'opendyslexic bold';
+    src: url('../uploads/dyslexic-font/opendyslexic-bold-webfont.eot');
+    src: url('../uploads/dyslexic-font/opendyslexic-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../uploads/dyslexic-font/opendyslexic-bold-webfont.woff') format('woff'),
+         url('../uploads/dyslexic-font/opendyslexic-bold-webfont.ttf') format('truetype'),
+         url('../uploads/dyslexic-font/opendyslexic-bold-webfont.svg#opendyslexicbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'opendyslexic regular';
+    src: url('../uploads/dyslexic-font/opendyslexic-regular-webfont.eot');
+    src: url('../uploads/dyslexic-font/opendyslexic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../uploads/dyslexic-font/opendyslexic-regular-webfont.woff') format('woff'),
+         url('../uploads/dyslexic-font/opendyslexic-regular-webfont.ttf') format('truetype'),
+         url('../uploads/dyslexic-font/opendyslexic-regular-webfont.svg#opendyslexicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(175, 175, 175);
+    font-family: 'opendyslexic bold', arial, sans-serif;
+    text-align: center;
+    margin: 30px;
+    border: 10px solid;
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+
+h2 {
+    font-size: 45px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: -4px;
+}
+
+p {
+    font-family: 'opendyslexic regular', arial, sans-serif;
+    font-size: 17px;
+}
+
+#next {
+    color: #4ad391;
+}
+
+#coming-up {
+}
+
+#tomorrow {
+}
+
+.message {
+    margin-top: -70px;
+    margin-bottom: 100px;
+}
+

@@ -1,0 +1,56 @@
+/From the desk of Faheem Patel
+!!!
+%html
+
+  %head
+    %title Exam Countdown (G400)
+    %link(rel="stylesheet" href="css/dyslexic.css")
+    %meta(http-equiv="refresh" content="1800")
+
+  %body
+    %h2{:id => "title"} Exam Countdown
+    - count = 0
+    - @to_display.each do |exam|
+
+      - if count == 0
+
+        - if exam[1] < 0
+          - next
+
+        #next
+          %h3 
+            = "#{exam[0]}"
+          %p
+            = "#{exam[2]}, FB 326"
+
+          - if exam[1] == 0
+            %h1 TODAY
+            %p{:class => "message"} Good Luck!
+            
+          - elsif exam[1] == 1
+            %h1 TOMORROW
+            %p{:class => "message"} Be sure to sleep well.
+
+          - else
+            %h1
+              = "#{exam[1]}"
+              %br
+              DAYS
+
+        - count += 1
+
+      - else
+        .coming-up
+          %h3 
+            = "#{exam[0]}"
+          %p
+            = "#{exam[2]}, FB 326"
+          - if exam[1] == 1
+            %h1 TOMORROW
+            %p{:class => "message"} Be sure to sleep well.
+          - else
+            %h1
+              = "#{exam[1]}"
+              %br
+              DAYS
+
