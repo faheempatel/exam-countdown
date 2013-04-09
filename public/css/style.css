@@ -3,9 +3,7 @@ body {
     color: #010101;
     font-family: quicksand, helvetica, arial, sans-serif;
     text-align: center;
-    margin-top: 40px;
-    margin-left: 40px;
-    margin-bottom: 40px;
+    margin: 30px;
     border: 10px solid;
 }
 
