@@ -3,7 +3,12 @@ body {
     color: rgb(0, 52, 102);
     font-family: quicksand, helvetica, arial, sans-serif;
     text-align: center;
-    margin: 30px;
+    margin: 0 auto;
+    width: 75%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
     border: 10px solid;
 }
 
@@ -45,4 +50,3 @@ p {
     margin-top: -70px;
     margin-bottom: 100px;
 }
-
