@@ -36,14 +36,11 @@ p {
     font-weight: 400;
 }
 
-#next {
+.next {
     color: rgb(234, 239, 255);
 }
 
-#coming-up {
-}
-
-#tomorrow {
+.coming-up {
 }
 
 .message {

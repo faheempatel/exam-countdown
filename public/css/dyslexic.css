@@ -32,6 +32,6 @@ p {
     font-family: 'opendyslexic regular', arial, sans-serif;
 }
 
-#next {
+.next {
     color: rgb(219, 228, 255);
 }

@@ -10,6 +10,7 @@
 
   %body
     %h2{:id => "title"} Exam Countdown
+
     - count = 0
     - @to_display.each do |exam|
 
@@ -18,48 +19,33 @@
         - if exam[1] < 0
           - next
 
-        #next
-          %h3 
-            = "#{exam[0]}"
-          %p
-            - if exam[0] == "Object-Oriented Programming"
-              = "#{exam[2]}, ITL"
-            - else
-              = "#{exam[2]}, FB 326"
-
-          - if exam[1] == 0
-            %h1 TODAY
-            %p{:class => "message"} Good Luck!
-            
-          - elsif exam[1] == 1
-            %h1 TOMORROW
-            %p{:class => "message"} Be sure to sleep well.
-
-          - else
-            %h1
-              = "#{exam[1]}"
-              %br
-              DAYS
-
+        - attribute = "next"
         - count += 1
 
-      - else
-        .coming-up
-          %h3 
-            = "#{exam[0]}"
-          %p
-            - if exam[0] == "Object-Oriented Programming"
-              = "#{exam[2]}, ITL"
-            - else
-              = "#{exam[2]}, FB 326"
+      - else 
+        - attribute = "coming-up"
 
-          - if exam[1] == 1
-            %h1 TOMORROW
-            %p{:class => "message"} Be sure to sleep well.
+      %div{:class => attribute}
+        %h3 
+          = "#{exam[0]}"
 
+        %p
+          - if exam[0] == "Object-Oriented Programming"
+            = "#{exam[2]}, ITL"
           - else
-            %h1
-              = "#{exam[1]}"
-              %br
-              DAYS
+            = "#{exam[2]}, FB 326"
+
+        - if exam[1] == 0
+          %h1 TODAY
+          %p{:class => "message"} Good Luck!
+          
+        - elsif exam[1] == 1
+          %h1 TOMORROW
+          %p{:class => "message"} Be sure to sleep well.
+
+        - else
+          %h1
+            = "#{exam[1]}"
+            %br
+            DAYS
 
