@@ -21,49 +21,17 @@
 }
 
 body {
-    background-color: rgb(236, 236, 236);
-    color: rgb(53, 53, 53);
+    color: rgb(18, 25, 51);
     font-family: 'opendyslexic bold', arial, sans-serif;
-    margin: 30px;
-    padding-left: 70px;
-}
-
-h1 {
-    font-size: 72px;
-    font-weight: 700;
-    margin-top: 0px;
-    margin-bottom: 100px;
-}
-
-h2 {
-    font-size: 45px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-
-h3 {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: -4px;
+    width: 600px;
+    text-align: left;
+    border: 0px solid;
 }
 
 p {
     font-family: 'opendyslexic regular', arial, sans-serif;
-    font-size: 17px;
 }
 
 #next {
-    color: #4ad391;
+    color: rgb(219, 228, 255);
 }
-
-#coming-up {
-}
-
-#tomorrow {
-}
-
-.message {
-    margin-top: -70px;
-    margin-bottom: 100px;
-}
-
