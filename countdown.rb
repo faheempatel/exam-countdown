@@ -62,7 +62,7 @@ def info_to_display()
         start_time  = Time.parse(array[2], date)
         venue       = array[3]
         #coordinates = locations[venue]
-        display_date = start_time.strftime("%A, %d %B %Y, %H:%M")
+        display_date = start_time.strftime("%A %d %B %Y, %H:%M")
         to_display << [subject, days_left, display_date, venue]
     end
     # Sort by days left (fewer first)
