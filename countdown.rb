@@ -58,10 +58,12 @@ def info_to_display()
     exams.each do |module_code, array|
         subject     = array[0]
         days_left   = difference(array[1])
-        start_time  = array[2]
+        date        = Date.parse(array[1])
+        start_time  = Time.parse(array[2], date)
         venue       = array[3]
         #coordinates = locations[venue]
-        to_display << [subject, days_left, start_time, venue]
+        display_date = start_time.strftime("%A, %d %B %Y, %H:%M")
+        to_display << [subject, days_left, display_date, venue]
     end
     # Sort by days left (fewer first)
     to_display = to_display.sort { |a, b| a[1] <=> b[1] }
