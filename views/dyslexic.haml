@@ -31,9 +31,13 @@
 
         %p
           - if exam[0] == "Object-Oriented Programming"
-            = "#{exam[2]}, ITL"
+            = "#{exam[2]}"
+            %br
+            = "#{exam[3]}, ITL"
           - else
-            = "#{exam[2]}, FB 326"
+            = "#{exam[2]}"
+            %br
+            = "#{exam[3]}, FB 326"
 
         - if exam[1] == 0
           %h1 TODAY
