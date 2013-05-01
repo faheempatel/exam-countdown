@@ -4,7 +4,11 @@ body {
     font-family: quicksand, helvetica, arial, sans-serif;
     text-align: center;
     margin: 0 auto;
+}
+
+#box {
     width: 75%;
+    margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 30px;
     padding-left: 30px;
@@ -47,4 +51,19 @@ p {
 .message {
     margin-top: -70px;
     margin-bottom: 100px;
+}
+
+#footer {
+    color: rgb(234, 239, 255);
+    margin-bottom: 50px;
+}
+
+#footer a {
+    color: rgb(234, 239, 255);
+    text-decoration: none;
+    border-bottom: 2px solid;
+}
+
+#footer a:hover {
+   color: rgb(158, 201, 255); 
 }

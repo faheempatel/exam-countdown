@@ -6,45 +6,49 @@
     %title Exam Countdown (G400)
     %link(rel="stylesheet" href="css/style.css")
     %link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Quicksand:400,700")
+    <link href='http://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
     %meta(http-equiv="refresh" content="1800")
 
   %body
-    %h2{:id => "title"} Exam Countdown
+    %div{:id => "box"}
+      %h2{:id => "title"} Exam Countdown
 
-    - count = 0
-    - @to_display.each do |exam|
+      - count = 0
+      - @to_display.each do |exam|
 
-      - if count == 0
+        - if count == 0
 
-        - if exam[1] < 0
-          - next
+          - if exam[1] < 0
+            - next
 
-        - class_name = "next"
-        - count += 1
-
-      - else
-        - class_name = "coming-up"
-
-      %div{:class => class_name}
-        %h3 
-          = "#{exam[0]}"
-          
-        %p
-          = "#{exam[2]}"
-          %br
-          = "#{exam[3]}, #{exam[4]}"
-
-        - if exam[1] == 0
-          %h1 TODAY
-          %p{:class => "message"} Hey Awesome, yeah YOU, go kick some exam ass today.
-          
-        - elsif exam[1] == 1
-          %h1 TOMORROW
-          %p{:class => "message"} Be sure to sleep well.
+          - class_name = "next"
+          - count += 1
 
         - else
-          %h1
-            = "#{exam[1]}"
-            %br
-            DAYS
+          - class_name = "coming-up"
 
+        %div{:class => class_name}
+          %h3 
+            = "#{exam[0]}"
+            
+          %p
+            = "#{exam[2]}"
+            %br
+            = "#{exam[3]}, #{exam[4]}"
+
+          - if exam[1] == 0
+            %h1 TODAY
+            %p{:class => "message"} Hey Awesome, yeah YOU, go kick some exam ass today.
+            
+          - elsif exam[1] == 1
+            %h1 TOMORROW
+            %p{:class => "message"} Be sure to sleep well.
+
+          - else
+            %h1
+              = "#{exam[1]}"
+              %br
+              DAYS
+    %p{:id => "footer"} 
+      exam countdown is a thing made by your friend
+      %a{:href => 'http://faheempatel.com'} Faheem
