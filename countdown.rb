@@ -36,11 +36,8 @@ end
 
 def info_to_display()
     locations = {
-                    'York Hall'   => [51.530135, -0.054117],
-                    'Town Hall'   => [51.536636, -0.020864],
-                    'Great Hall'  => [51.524586, -0.040669],
-                    'Sports Hall' => [51.524586, -0.040669],
-                    'Banc-113'    => [52.524586, -0.040669]
+                    'York Hall'   => "http://goo.gl/maps/CrFa5",
+                    'Town Hall'   => "http://goo.gl/maps/Jh5Wo",
                 }
 
     exams = {
@@ -61,10 +58,12 @@ def info_to_display()
         date        = Date.parse(array[1])
         start_time  = Time.parse(array[2], date)
         venue       = array[3]
-        #coordinates = locations[venue]
+        venue_url   = locations[venue]
+
         display_date = start_time.strftime("%A %d %B %Y")
         display_time = start_time.strftime("%H:%M")
-        to_display << [subject, days_left, display_date, display_time, venue]
+
+        to_display << [subject, days_left, display_date, display_time, venue, venue_url]
     end
     # Sort by days left (fewer first)
     to_display = to_display.sort { |a, b| a[1] <=> b[1] }

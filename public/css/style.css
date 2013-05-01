@@ -41,6 +41,16 @@ p {
     line-height: 1.6em;
 }
 
+a {
+    color: rgb(33, 46, 90);
+    text-decoration: none;
+    border-bottom: 2px solid;
+}
+
+a:hover {
+   color: rgb(255, 214, 0);
+}
+
 .next {
     color: rgb(234, 239, 255);
 }
@@ -65,5 +75,5 @@ p {
 }
 
 #footer a:hover {
-   color: rgb(158, 201, 255); 
+   color: rgb(255, 214, 0);
 }

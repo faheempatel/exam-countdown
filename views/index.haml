@@ -33,7 +33,13 @@
           %p
             = "#{exam[2]}"
             %br
-            = "#{exam[3]}, #{exam[4]}"
+            = "#{exam[3]}, "
+
+            - if exam[5]
+              %a{:href => exam[5]}
+                = "#{exam[4]}"
+            - else
+              = "#{exam[4]}"
 
           - if exam[1] == 0
             %h1 TODAY
