@@ -51,6 +51,7 @@ a {
 
 a:hover {
    background-color: rgb(255, 248, 173);
+   color: #292929;
 }
 
 .next {
@@ -78,5 +79,5 @@ a:hover {
 }
 
 #footer a:hover {
-   background-color: rgb(255, 255, 255);
+   background-color: rgb(255, 245, 174);
 }
