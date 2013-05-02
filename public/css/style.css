@@ -19,26 +19,26 @@ body {
 }
 
 h1 {
-    font-size: 89px;
+    font-size: 78px;
     font-weight: 700;
     margin-top: 0px;
     margin-bottom: 100px;
 }
 
 h2 {
-    font-size: 55px;
+    font-size: 48px;
     margin-top: 60px;
     margin-bottom: 60px;
 }
 
 h3 {
-    font-size: 29px;
+    font-size: 30px;
     font-weight: 700;
     margin-bottom: -4px;
 }
 
 p {
-    font-size: 21px;
+    font-size: 18px;
     line-height: 1.6em;
 }
 
