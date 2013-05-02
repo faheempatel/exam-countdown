@@ -1,7 +1,7 @@
 body {
     background-color: rgb(255, 199, 86);
     color: rgb(179, 179, 179);
-    font-family: 'Josefin Sans', quicksand, helvetica, arial, sans-serif;
+    font-family: quicksand, helvetica, arial, sans-serif;
     text-align: center;
     margin: 0 auto;
 }
@@ -39,7 +39,6 @@ h3 {
 
 p {
     font-size: 21px;
-    font-weight: 600;
     line-height: 1.6em;
 }
 
