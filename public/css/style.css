@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(47, 68, 141);
-    color: rgb(33, 46, 90);
+    background-color: rgb(255, 199, 86);
+    color: rgb(170, 170, 170);
     font-family: quicksand, helvetica, arial, sans-serif;
     text-align: center;
     margin: 0 auto;
@@ -13,7 +13,9 @@ body {
     margin-bottom: 30px;
     padding-left: 30px;
     padding-right: 30px;
-    border: 10px solid;
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
 }
 
 h1 {
@@ -42,17 +44,17 @@ p {
 }
 
 a {
-    color: rgb(33, 46, 90);
+    color: rgb(170, 170, 170);
     text-decoration: none;
     border-bottom: 2px solid;
 }
 
 a:hover {
-   color: rgb(255, 214, 0);
+   background-color: rgb(255, 248, 173);
 }
 
 .next {
-    color: rgb(234, 239, 255);
+    color: #292929;
 }
 
 .coming-up {
@@ -64,17 +66,17 @@ a:hover {
 }
 
 #footer {
-    color: rgb(234, 239, 255);
+    color: #292929;
     padding-top: 20px;
     margin-bottom: 50px;
 }
 
 #footer a {
-    color: rgb(234, 239, 255);
+    color: #292929;
     text-decoration: none;
     border-bottom: 2px solid;
 }
 
 #footer a:hover {
-   color: rgb(255, 214, 0);
+   background-color: rgb(255, 255, 255);
 }
