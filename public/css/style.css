@@ -48,9 +48,9 @@ a {
     border-bottom: 2px solid;
 }
 
-a:hover {
-   background-color: rgb(255, 248, 173);
-   color: #292929;
+a:hover { 
+    background-color: rgb(255, 250, 199);
+    color: #292929;
 }
 
 .next {
@@ -61,8 +61,13 @@ a:hover {
 }
 
 .message {
+    width: 520px;
+    margin: 0 auto;
     margin-top: -70px;
     margin-bottom: 100px;
+    padding: 10px;
+    background-color: rgb(255, 250, 199);
+    text-align: left;
 }
 
 #footer {

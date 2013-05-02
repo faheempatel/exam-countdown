@@ -44,11 +44,15 @@
 
           - if exam[1] == 0
             %h1 TODAY
-            %p{:class => "message"} Hey Awesome, yeah YOU, go kick some exam ass today.
-            
+            %p{:class => "message", :style => "text-align: center;"} 
+              Does that mean in Russia exam scared of you?
+              %br
+              Quick! Shh! There's no time to think. Grab your passport.
+
           - elsif exam[1] == 1
             %h1 TOMORROW
-            %p{:class => "message"} Be sure to sleep well.
+            %p{:class => "message"} 
+              Legend has it if you high-five Faheem before an exam all your dreams come true. High-five him after one at your own peril... hugs <b>(PLURAL!)</b> are fine and his are known to cure shyness.
 
           - else
             %h1
@@ -58,3 +62,7 @@
     %p{:id => "footer"} 
       exam countdown is a thing made by your friend
       %a{:href => 'http://faheempatel.com'} Faheem
+      %br
+      Payments to him should be made in hugs and high-fives only.
+      %br
+      (unless you have a shit ton of bitcoins).
