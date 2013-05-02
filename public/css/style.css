@@ -1,7 +1,7 @@
 body {
     background-color: rgb(255, 199, 86);
-    color: rgb(170, 170, 170);
-    font-family: quicksand, helvetica, arial, sans-serif;
+    color: rgb(179, 179, 179);
+    font-family: 'Josefin Sans', quicksand, helvetica, arial, sans-serif;
     text-align: center;
     margin: 0 auto;
 }
@@ -19,14 +19,14 @@ body {
 }
 
 h1 {
-    font-size: 76px;
+    font-size: 89px;
     font-weight: 700;
     margin-top: 0px;
     margin-bottom: 100px;
 }
 
 h2 {
-    font-size: 47px;
+    font-size: 55px;
     margin-top: 60px;
     margin-bottom: 60px;
 }
@@ -38,8 +38,8 @@ h3 {
 }
 
 p {
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 21px;
+    font-weight: 600;
     line-height: 1.6em;
 }
 

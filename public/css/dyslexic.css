@@ -21,7 +21,7 @@
 }
 
 body {
-    color: rgb(18, 25, 51);
+    color: rgb(102, 102, 102);
     font-family: 'opendyslexic bold', arial, sans-serif;
     width: 600px;
     text-align: left;
@@ -33,5 +33,5 @@ p {
 }
 
 .next {
-    color: rgb(219, 228, 255);
+    color: rgb(18, 25, 51);
 }
