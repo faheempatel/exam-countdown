@@ -7,12 +7,12 @@ body {
 }
 
 #box {
-    width: 75%;
+    width: 60%;
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
     border: 10px solid rgb(255, 255, 255);
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
