@@ -67,7 +67,14 @@ a:hover {
     margin-bottom: 100px;
     padding: 10px;
     background-color: rgb(255, 250, 199);
-    text-align: left;
+}
+
+.message a {
+    color: #292929;
+}
+
+.message a:hover {
+    background-color: rgb(255, 199, 86);
 }
 
 #footer {

@@ -44,7 +44,7 @@
 
           - if exam[1] == 0
             %h1 TODAY
-            %p{:class => "message", :style => "text-align: center;"} 
+            %p{:class => "message"} 
               Does that mean in Russia exam scared of you?
               %br
               Quick! Shh! There's no time to think. Grab your passport.
@@ -52,7 +52,9 @@
           - elsif exam[1] == 1
             %h1 TOMORROW
             %p{:class => "message"} 
-              Legend has it if you high-five Faheem right before an exam all your dreams come true. High-five him after one at your own peril... hugs <b>(PLURAL!)</b> are fine though and are known to cure shyness.
+              <b>FACT: </b>Faheem has watched 
+              %a{:href => 'http://www.youtube.com/watch?feature=player_embedded&v=21OH0wlkfbc'} this 
+              238 times.
 
           - else
             %h1
