@@ -53,6 +53,10 @@ a:hover {
     color: #292929;
 }
 
+a:active {
+    background-color: rgb(255, 199, 86);
+}
+
 .next {
     color: #292929;
 }
