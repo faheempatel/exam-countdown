@@ -44,12 +44,15 @@
 
           - if exam[1] == 0
             %h1 TODAY
-            <img src="http://faheempatel.com/gifs/css.gif" style="width:520px;  margin-top: -70px; margin-bottom: 100px; border: 5px solid rgb(41, 41, 41);" title="How I CSS." alt="A gif">
+            %p{:class => "message"} 
+              You know what kid? You're alright.
 
           - elsif exam[1] == 1
             %h1 TOMORROW
             %p{:class => "message"} 
-              We all lost yesterday. Let us be better today and tomorrow and the day after that.
+              Check
+              %a{:href => "http://www.geoguessr.com/"} this
+              out next time you're having a break. I got 11535.
               %br
 
           - else
