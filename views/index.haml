@@ -44,19 +44,7 @@
 
           - if exam[1] == 0
             %h1 TODAY
-            %p{:class => "message"} 
-              Thanks for using exam countdown, I hope it was useful. 
-              %br
-              %br
-              If you're working on anything interesting over the Summer and have room for one more, I'd love to hear from you. You should shoot me an email  
-              <a href = "mailto:hello@faheempatel.com?Subject=Summer project"/>here.</a>
-              %br
-              %br
-              Thanks again,
-              %br 
-              Faheem
-              %br
-
+            
           - elsif exam[1] == 1
             %h1 TOMORROW
 
@@ -65,6 +53,19 @@
               = "#{exam[1]}"
               %br
               DAYS
+      %p{:style => "color: #292929; margin-bottom: 50px; text-align: left"}
+        Thanks for using exam countdown, I hope it was useful. 
+        %br
+        %br
+        If you're working on anything interesting over the Summer and have room for one more, I'd love to hear from you. You should shoot me an email  
+        <a href = "mailto:hello@faheempatel.com?Subject=Summer project"/>here.</a>
+        %br
+        %br
+        Thanks again,
+        %br 
+        Faheem
+        %br
+
     %p{:id => "footer"} 
       exam countdown is a thing made by your friend
       %a{:href => 'http://faheempatel.com'} Faheem
