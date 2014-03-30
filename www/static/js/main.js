@@ -50,8 +50,9 @@ $(document).ready(function() {
     div.append(
         '<div class="exam">'
       + '<h' + size + '>' + heading.toUpperCase() + '</h' + size + '>'
-      + '<p>in ' + daysBetween(date) + ' Days</p>'
+      + '<p><strong>in ' + daysBetween(date) + ' Days</strong></p>'
       + '<p>' + date.toUTCString().slice(0, -7) + ' GMT</p>'
+      + '<p>Location: To be announced</p>'
       + '</div>'
     );
   }
