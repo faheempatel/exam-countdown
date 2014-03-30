@@ -30,28 +30,28 @@ $(document).ready(function() {
     }
   };
 
-  function days_between(date) {
+  function daysBetween(date) {
+    // The number of milliseconds in one day
+    var ONE_DAY = 1000 * 60 * 60 * 24;
 
-      // The number of milliseconds in one day
-      var ONE_DAY = 1000 * 60 * 60 * 24;
+    // Convert both dates to milliseconds
+    var current = new Date().getTime();
+    var exam = date.getTime();
 
-      // Convert both dates to milliseconds
-      var date1_ms = new Date().getTime();
-      var date2_ms = new Date(date).getTime();
+    // Calculate the difference in milliseconds
+    var difference = Math.abs(current - exam);
 
-      // Calculate the difference in milliseconds
-      var difference_ms = Math.abs(date1_ms - date2_ms);
-
-      // Convert back to days and return
-      return Math.round(difference_ms/ONE_DAY);
-
+    // Convert back to days and return
+    return Math.round(difference/ONE_DAY);
   }
 
   function appendExam(div, heading, size, timestamp) {
+    var date = new Date(timestamp);
     div.append(
         '<div class="exam">'
       + '<h' + size + '>' + heading + '</h' + size + '>'
-      + '<p>in ' + timestamp + ' Days</p>'
+      + '<p>in ' + daysBetween(date) + ' Days</p>'
+      + '<p>' + date.toUTCString().slice(0, -7) + ' GMT</p>'
       + '</div>'
     );
   }
@@ -59,9 +59,9 @@ $(document).ready(function() {
   for (var module in json) {
     var exam = json[module];
     if (exam.timestamp === '2014-04-28T10:00:00+00:00') {
-      appendExam($('.next-up'), exam.name, 1, days_between(exam.timestamp));
+      appendExam($('.next-up'), exam.name, 1, exam.timestamp);
     } else {
-      appendExam($('.later'), exam.name, 3, days_between(exam.timestamp));
+      appendExam($('.later'), exam.name, 3, exam.timestamp);
     }
   }
 });
