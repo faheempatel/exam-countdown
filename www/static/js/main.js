@@ -49,7 +49,7 @@ $(document).ready(function() {
     var date = new Date(timestamp);
     div.append(
         '<div class="exam">'
-      + '<h' + size + '>' + heading + '</h' + size + '>'
+      + '<h' + size + '>' + heading.toUpperCase() + '</h' + size + '>'
       + '<p>in ' + daysBetween(date) + ' Days</p>'
       + '<p>' + date.toUTCString().slice(0, -7) + ' GMT</p>'
       + '</div>'

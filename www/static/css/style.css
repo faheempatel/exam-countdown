@@ -1,7 +1,7 @@
 body {
   width: 100%;
   margin: 0;
-  font-family: Avenir, Helvetica, sans-serif;
+  font-family: "brandon-grotesque", Avenir, sans-serif;
   background-image: -webkit-linear-gradient(295deg, #210838, #838eca);
   background-image: linear-gradient(155deg, #210838, #838eca);
 }
@@ -19,21 +19,23 @@ body {
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: 1.7em;
+  font-weight: 700;
 }
 
 h3 {
   font-size: 1.5em;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 h1, h3 {
-  margin-bottom: 13%;
+  margin-bottom: 12%;
 }
 
 p {
-  font-size: 1em;
+  padding: 5%;
+  font-family: "proxima-nova", Avenir, sans-serif;
+  font-size: 1.1em;
   color: rgba(255, 255, 255, 0.65);
   background-color: rgba(225, 205, 255, 0.04);
-  padding: 5%;
 }
