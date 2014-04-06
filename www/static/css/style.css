@@ -18,6 +18,14 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.19);
 }
 
+.exam a:link {
+  color: inherit;
+}
+
+.exam a:visited {
+  color: inherit;
+}
+
 h1 {
   font-size: 1.7em;
   font-weight: 700;
