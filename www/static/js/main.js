@@ -18,7 +18,7 @@ $(document).ready(function() {
     },
     "ecs522u": {
       "name": "Graphical User Interfaces",
-      "timestamp": "2014-05-15T14:30:00+00:00",
+      "timestamp": "2014-05-14T14:30:00+00:00",
       "venue": "Octagon"
     },
     "ecs519u": {
