@@ -40,22 +40,22 @@ $(document).ready(function() {
     }
   };
 
-  function daysBetween(date) {
+  function daysBetween(timestamp) {
     // The number of milliseconds in one day
     var ONE_DAY = 1000 * 60 * 60 * 24;
 
     // Convert both dates to milliseconds
     var current = new Date().getTime();
-    var exam = date.getTime();
+    var exam = new Date(timestamp).getTime();
 
     // Calculate the difference in milliseconds
-    var difference = Math.abs(current - exam);
+    var difference = (exam - current);
 
     // Convert back to days and return
     return Math.round(difference/ONE_DAY);
   }
 
-  function appendExam(div, exam, size) {
+  function appendExam(div, exam) {
     var date = new Date(exam.timestamp);
     var location = '<p>' + exam.venue + '</p>';
     if (exam.googleMapsUrl) {
@@ -64,22 +64,43 @@ $(document).ready(function() {
         + exam.googleMapsUrl
         + '">Google Maps</a>)</p>';
     }
+
+    var plural = exam.timeDifference === -1 ? 'day' : 'days';
+    var difference = exam.timeDifference < 0 ? 'was ' + Math.abs(exam.timeDifference) + ' ' + plural + ' ago' : 'in ' + exam.timeDifference + ' ' + plural;
     div.append(
         '<div class="exam">'
-      + '<h' + size + '>' + exam.name.toUpperCase() + '</h' + size + '>'
-      + '<p><strong>in ' + daysBetween(date) + ' Days</strong></p>'
+      + '<h2>' + exam.name.toUpperCase() + '</h2>'
+      + '<p><strong>' + difference + '</strong></p>'
       + '<p>' + date.toUTCString().slice(0, -7) + ' GMT</p>'
       + location
       + '</div>'
     );
   }
 
+  var exam;
+  var nextUp = true;
+  var completedExams = [];
+
   for (var module in json) {
-    var exam = json[module];
-    if (exam.timestamp === '2014-04-28T10:00:00+00:00') {
-      appendExam($('.next-up'), exam, 1);
+    exam = json[module];
+    exam.timeDifference = daysBetween(exam.timestamp);
+    if (exam.timeDifference < 0) {
+      completedExams.push(exam);
+    }
+    else if (nextUp) {
+      appendExam($('.next-up'), exam);
+      nextUp = false;
     } else {
-      appendExam($('.later'), exam, 3);
+      appendExam($('.later'), exam);
+    }
+  }
+
+  // Append completed exams to the end
+  if (completedExams.length > 0) {
+    $('.container').append('<div class="completed"></div>');
+    for (var i = 0; i < completedExams.length; i++) {
+      exam = completedExams[i];
+      appendExam($('.completed'), exam);
     }
   }
 });
