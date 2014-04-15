@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$('document').ready(function() {
   var json = {
     "ecs524u": {
       "name": "Internet Protocols and Applications",
@@ -103,4 +103,11 @@ $(document).ready(function() {
       appendExam($('.completed'), exam);
     }
   }
+
+  var t = new Trianglify({
+      x_gradient: colorbrewer.BuPu[9]
+    , y_gradient: ['#7CA1FF', '#838eca']
+    , noiseIntensity: 0});
+  var pattern = t.generate(document.body.clientWidth, document.body.clientHeight);
+  document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
 });

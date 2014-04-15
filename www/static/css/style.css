@@ -2,14 +2,11 @@ body {
   width: 100%;
   margin: 0;
   font-family: "brandon-grotesque", Avenir, sans-serif;
-  background-image: -webkit-linear-gradient(295deg, #210838, #838eca);
-  background-image: linear-gradient(155deg, #210838, #838eca);
 }
 
 .container {
   max-width: 650px;
   margin: 0 auto;
-  margin-bottom: 80px;
   text-align: center;
 }
 
@@ -50,7 +47,6 @@ p {
   padding: 5%;
   font-family: "proxima-nova", Avenir, sans-serif;
   font-size: 1.1em;
-  color: rgba(255, 255, 255, 0.65);
-  background-color: rgba(225, 205, 255, 0.04);
+  background-color: rgba(225, 205, 255, 0.15);
   border-radius: 4px;
 }
