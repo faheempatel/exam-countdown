@@ -2,40 +2,40 @@ $('document').ready(function() {
   var json = {
     "ecs524u": {
       "name": "Internet Protocols and Applications",
-      "timestamp": "2014-04-28T10:00:00+00:00",
+      "timestamp": "2014-04-28T10:00:00+01:00",
       "venue": "John Orwell Sports Centre",
       "googleMapsUrl": "https://goo.gl/maps/Cw8dM"
     },
     "ecs505u": {
       "name": "Software Engineering",
-      "timestamp": "2014-05-06T14:30:00+00:00",
+      "timestamp": "2014-05-06T14:30:00+01:00",
       "venue": "Sports Hall"
     },
     "ecs518u": {
       "name": "Operating Systems",
-      "timestamp": "2014-05-08T14:30:00+00:00",
+      "timestamp": "2014-05-08T14:30:00+01:00",
       "venue": "BANC-113"
     },
     "ecs522u": {
       "name": "Graphical User Interfaces",
-      "timestamp": "2014-05-14T14:30:00+00:00",
+      "timestamp": "2014-05-14T14:30:00+01:00",
       "venue": "Octagon"
     },
     "ecs519u": {
       "name": "Database Systems",
-      "timestamp": "2014-05-16T10:00:00+00:00",
+      "timestamp": "2014-05-16T10:00:00+01:00",
       "venue": "Stratford Town Hall",
       "googleMapsUrl": "https://goo.gl/maps/EcVmB"
     },
     "ecs509u": {
       "name": "Probability and Matrices",
-      "timestamp": "2014-05-19T14:30:00+00:00",
+      "timestamp": "2014-05-19T14:30:00+01:00",
       "venue": "John Orwell Sports Centre",
       "googleMapsUrl": "https://goo.gl/maps/Cw8dM"
     },
     "ecs510u": {
       "name": "Algorithms and Data Structures in an Object-Oriented Framework",
-      "timestamp": "2014-05-23T10:00:00+00:00",
+      "timestamp": "2014-05-23T10:00:00+01:00",
       "venue": "Octagon"
     }
   };
@@ -44,12 +44,15 @@ $('document').ready(function() {
     // The number of milliseconds in one day
     var ONE_DAY = 1000 * 60 * 60 * 24;
 
+    // .getTime() converts to UTC time so we'll have to add the offset later
+    var BST_OFFSET = (1000 * 60 * 60);
+
     // Convert both dates to milliseconds
     var current = new Date().getTime();
     var exam = new Date(timestamp).getTime();
 
     // Calculate the difference in milliseconds
-    var difference = (exam - current);
+    var difference = (exam - current) + BST_OFFSET;
 
     // Convert back to days and return
     return Math.round(difference/ONE_DAY);
@@ -58,6 +61,7 @@ $('document').ready(function() {
   function appendExam(div, exam) {
     var date = new Date(exam.timestamp);
     var location = '<p>' + exam.venue + '</p>';
+
     if (exam.googleMapsUrl) {
       location = '<p>' + exam.venue
         + '<br/>(<a href="'
@@ -65,13 +69,25 @@ $('document').ready(function() {
         + '">Google Maps</a>)</p>';
     }
 
-    var plural = exam.timeDifference === -1 ? 'day' : 'days';
-    var difference = exam.timeDifference < 0 ? 'was ' + Math.abs(exam.timeDifference) + ' ' + plural + ' ago' : 'in ' + exam.timeDifference + ' ' + plural;
+    var difference;
+    var dayName = date.toString().slice(0, 3);
+    var monthName = date.toString().slice(4, 7);
+
+    if (exam.timeDifference === 0) {
+      difference = "Today";
+    } else if (exam.timeDifference === 1) {
+      difference = "Tomorrow";
+    } else if (exam.timeDifference === -1) {
+      difference = "Yesterday";
+    } else {
+      difference = exam.timeDifference < -1 ? 'done with it ' + Math.abs(exam.timeDifference) + ' days ago!' : 'in ' + exam.timeDifference + ' days';
+    }
+
     div.append(
         '<div class="exam">'
       + '<h2>' + exam.name.toUpperCase() + '</h2>'
       + '<p><strong>' + difference + '</strong></p>'
-      + '<p>' + date.toUTCString().slice(0, -7) + ' GMT</p>'
+      + '<p>' + dayName + ', ' + date.getDate() + ' ' + monthName + ' ' + date.toString().slice(10, -18) + ' BST</p>'
       + location
       + '</div>'
     );
