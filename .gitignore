@@ -6,3 +6,4 @@ _STORE
 /pkg
 /doc/api
 /Gemfile.lock
+node_modules/
