@@ -44,18 +44,15 @@ $('document').ready(function() {
     // The number of milliseconds in one day
     var ONE_DAY = 1000 * 60 * 60 * 24;
 
-    // .getTime() converts to UTC time so we'll have to add the offset later
-    var BST_OFFSET = (1000 * 60 * 60);
-
     // Convert both dates to milliseconds
     var current = new Date().getTime();
     var exam = new Date(timestamp).getTime();
 
     // Calculate the difference in milliseconds
-    var difference = (exam - current) + BST_OFFSET;
+    var difference = (exam - current);
 
     // Convert back to days and return
-    return Math.round(difference/ONE_DAY);
+    return Math.floor(difference/ONE_DAY);
   }
 
   function appendExam(div, exam) {
