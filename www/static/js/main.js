@@ -40,7 +40,7 @@ $('document').ready(function() {
     }
   };
 
-  function daysBetween(timestamp) {
+  function daysUntil(timestamp) {
     // The number of milliseconds in one day
     var ONE_DAY = 1000 * 60 * 60 * 24;
 
@@ -77,7 +77,7 @@ $('document').ready(function() {
     } else if (exam.timeDifference === -1) {
       difference = "Yesterday";
     } else {
-      difference = exam.timeDifference < -1 ? 'done with it ' + Math.abs(exam.timeDifference) + ' days ago!' : 'in ' + exam.timeDifference + ' days';
+      difference = exam.timeDifference < -1 ? 'did it ' + Math.abs(exam.timeDifference) + ' days ago!' : 'in ' + exam.timeDifference + ' days';
     }
 
     div.append(
@@ -96,7 +96,7 @@ $('document').ready(function() {
 
   for (var module in json) {
     exam = json[module];
-    exam.timeDifference = daysBetween(exam.timestamp);
+    exam.timeDifference = daysUntil(exam.timestamp);
     if (exam.timeDifference < 0) {
       completedExams.push(exam);
     }
