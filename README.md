@@ -1,2 +1,4 @@
 #Exam Countdown
-A little site to help me keep track of my upcoming exams.
+A little site that helps me keep track of my upcoming exams.
+
+Currently live at: [http://exams.faheempatel.com](http://exams.faheempatel.com)
