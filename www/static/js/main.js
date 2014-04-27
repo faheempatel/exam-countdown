@@ -45,14 +45,21 @@ $('document').ready(function() {
     var ONE_DAY = 1000 * 60 * 60 * 24;
 
     // Convert both dates to milliseconds
-    var current = new Date().getTime();
-    var exam = new Date(timestamp).getTime();
+    var current = new Date();
+    var exam = new Date(timestamp);
 
     // Calculate the difference in milliseconds
-    var difference = (exam - current);
+    var difference = exam.getTime() - current.getTime();
 
-    // Convert back to days and return
-    return Math.floor(difference/ONE_DAY);
+    // Calculate day offset (doesn't take the month into account but fret not)
+    var dayDiff = exam.getDate() - current.getDate();
+
+    // Covert difference in milliseconds to days
+    var diffInDays = Math.round(difference/ONE_DAY);
+
+    // If the difference is less than a day but the date fall on the next calendar
+    // day, display a difference of one day, otherwise the difference as is
+    return (1 > diffInDays > 0 && dayDiff === 1 ) ? 1 : diffInDays;
   }
 
   function appendExam(div, exam) {
