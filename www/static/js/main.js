@@ -55,11 +55,18 @@ $('document').ready(function() {
     var dayDiff = exam.getDate() - current.getDate();
 
     // Covert difference in milliseconds to days
-    var diffInDays = Math.round(difference/ONE_DAY);
+    var diffInDays = difference/ONE_DAY;
 
-    // If the difference is less than a day but the date fall on the next calendar
+    // Stops it from rounding up to 1 (meaning tomorrow), when the exam is today
+    if (Math.floor(diffInDays) === 0) {
+      return 0;
+    } else {
+      diffInDays = Math.round(diffInDays);
+    }
+
+    // If the difference is less than a day but the date falls on the next calendar
     // day, display a difference of one day, otherwise the difference as is
-    return (1 > diffInDays > 0 && dayDiff === 1 ) ? 1 : diffInDays;
+    return (1 > diffInDays > 0 && dayDiff === 1) ? 1 : diffInDays;
   }
 
   function appendExam(div, exam) {
@@ -78,13 +85,13 @@ $('document').ready(function() {
     var monthName = date.toString().slice(4, 7);
 
     if (exam.timeDifference === 0) {
-      difference = "Today";
+      difference = 'Today';
     } else if (exam.timeDifference === 1) {
-      difference = "Tomorrow";
+      difference = 'Tomorrow';
     } else if (exam.timeDifference === -1) {
-      difference = "Yesterday";
+      difference = 'did it yesterday';
     } else {
-      difference = exam.timeDifference < -1 ? 'did it ' + Math.abs(exam.timeDifference) + ' days ago!' : 'in ' + exam.timeDifference + ' days';
+      difference = exam.timeDifference < -1 ? 'did it ' + Math.abs(exam.timeDifference) + ' days ago' : 'in ' + exam.timeDifference + ' days';
     }
 
     div.append(
