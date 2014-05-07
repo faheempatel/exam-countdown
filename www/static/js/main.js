@@ -58,7 +58,7 @@ $('document').ready(function() {
     var diffInDays = difference/ONE_DAY;
 
     // Stops it from rounding up to 1 (meaning tomorrow), when the exam is today
-    if (Math.floor(diffInDays) === 0) {
+    if (Math.floor(diffInDays) === 0 && dayDiff === 0) {
       return 0;
     } else {
       diffInDays = Math.round(diffInDays);
