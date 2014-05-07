@@ -112,7 +112,7 @@ $('document').ready(function() {
     exam = json[module];
     exam.timeDifference = daysUntil(exam.timestamp);
     if (exam.timeDifference < 0) {
-      completedExams.push(exam);
+      completedExams.unshift(exam);
     }
     else if (nextUp) {
       appendExam($('.next-up'), exam);
