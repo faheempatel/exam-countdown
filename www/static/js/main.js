@@ -60,6 +60,9 @@ $('document').ready(function() {
     // Stops it from rounding up to 1 (meaning tomorrow), when the exam is today
     if (Math.floor(diffInDays) === 0 && dayDiff === 0) {
       return 0;
+    // Math.round returns 0 for values such as -0.x, this fixes an edge case
+    } else if (Math.round(diffInDays) === 0 && dayDiff === -1) {
+      return -1;
     } else {
       diffInDays = Math.round(diffInDays);
     }
