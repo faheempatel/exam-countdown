@@ -34,7 +34,7 @@ body {
   font-weight: 700;
 }
 
-.later h2 {
+.later h2, .completed h2 {
   font-size: 1.5em;
   font-weight: 300;
 }
