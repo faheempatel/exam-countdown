@@ -57,19 +57,13 @@ $('document').ready(function() {
     // Covert difference in milliseconds to days
     var diffInDays = difference/ONE_DAY;
 
-    // Stops it from rounding up to 1 (meaning tomorrow), when the exam is today
-    if (Math.floor(diffInDays) === 0 && dayDiff === 0) {
-      return 0;
-    // Math.round returns 0 for values such as -0.x, this fixes an edge case
-    } else if (Math.round(diffInDays) === 0 && dayDiff === -1) {
-      return -1;
-    } else {
-      diffInDays = Math.round(diffInDays);
+    if (Math.floor(diffInDays) === dayDiff) {
+      return dayDiff;
     }
 
     // If the difference is less than a day but the date falls on the next calendar
-    // day, display a difference of one day, otherwise the difference as is
-    return (1 > diffInDays > 0 && dayDiff === 1) ? 1 : diffInDays;
+    // day, display a difference of one day, otherwise the rounded difference
+    return (1 > diffInDays > 0 && dayDiff === 1) ? 1 : Math.round(diffInDays);
   }
 
   function appendExam(div, exam) {
