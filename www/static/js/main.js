@@ -66,6 +66,39 @@ $('document').ready(function() {
     return (1 > diffInDays > 0 && dayDiff === 1) ? 1 : Math.round(diffInDays);
   }
 
+  function getDateString(date) {
+    var days = [
+        'Sunday'
+      , 'Monday'
+      , 'Tuesday'
+      , 'Wednesday'
+      , 'Thursday'
+      , 'Friday'
+      , 'Saturday'
+    ];
+
+    var months = [
+        "January"
+      , "February"
+      , "March"
+      , "April"
+      , "May"
+      , "June"
+      , "July"
+      , "August"
+      , "September"
+      , "October"
+      , "November"
+      , "December"
+    ];
+
+    var dayName = days[date.getDay()];
+    var monthName = months[date.getMonth()];
+    var minutes = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
+
+    return dayName + ', ' + date.getDate() + ' ' + monthName + ' ' + date.getFullYear() + ' ' + date.getHours() + ':' + minutes;
+  }
+
   function appendExam(div, exam) {
     var date = new Date(exam.timestamp);
     var location = '<p>' + exam.venue + '</p>';
@@ -78,8 +111,6 @@ $('document').ready(function() {
     }
 
     var difference;
-    var dayName = date.toString().slice(0, 3);
-    var monthName = date.toString().slice(4, 7);
 
     if (exam.timeDifference === 0) {
       difference = 'Today';
@@ -95,7 +126,7 @@ $('document').ready(function() {
         '<div class="exam">'
       + '<h2>' + exam.name.toUpperCase() + '</h2>'
       + '<p><strong>' + difference + '</strong></p>'
-      + '<p>' + dayName + ', ' + date.getDate() + ' ' + monthName + ' ' + date.toString().slice(10, -18) + ' BST</p>'
+      + '<p>' + getDateString(date) + ' BST</p>'
       + location
       + '</div>'
     );
