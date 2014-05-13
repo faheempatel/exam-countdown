@@ -94,9 +94,13 @@ $('document').ready(function() {
 
     var dayName = days[date.getDay()];
     var monthName = months[date.getMonth()];
-    var minutes = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
 
-    return dayName + ', ' + date.getDate() + ' ' + monthName + ' ' + date.getFullYear() + ' ' + date.getHours() + ':' + minutes;
+    return dayName + ', ' + date.getDate() + ' ' + monthName + ' ' + date.getFullYear();
+  }
+
+  function getTimeString(date) {
+    var minutes = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
+    return date.getHours() + ':' + minutes + ' BST';
   }
 
   function appendExam(div, exam) {
@@ -126,7 +130,8 @@ $('document').ready(function() {
         '<div class="exam">'
       + '<h2>' + exam.name.toUpperCase() + '</h2>'
       + '<p><strong>' + difference + '</strong></p>'
-      + '<p>' + getDateString(date) + ' BST</p>'
+      + '<p>' + getDateString(date) + '</p>'
+      + '<p>' + getTimeString(date) + '</p>'
       + location
       + '</div>'
     );
