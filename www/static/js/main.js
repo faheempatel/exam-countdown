@@ -44,7 +44,6 @@ $('document').ready(function() {
     // The number of milliseconds in one day
     var ONE_DAY = 1000 * 60 * 60 * 24;
 
-    // Convert both dates to milliseconds
     var current = new Date();
     var exam = new Date(timestamp);
 
@@ -59,11 +58,12 @@ $('document').ready(function() {
 
     if (Math.floor(diffInDays) === dayDiff) {
       return dayDiff;
+    } else if (Math.floor(diffInDays) < 0) {
+      return Math.round(diffInDays);
     }
 
-    // If the difference is less than a day but the date falls on the next calendar
-    // day, display a difference of one day, otherwise the rounded difference
-    return (1 > diffInDays > 0 && dayDiff === 1) ? 1 : Math.round(diffInDays);
+    // WRITE COMMENT
+    return Math.floor(diffInDays) + 1;
   }
 
   function getDateString(date) {
