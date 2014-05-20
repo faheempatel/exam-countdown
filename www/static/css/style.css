@@ -50,3 +50,10 @@ p {
   background-color: rgba(225, 205, 255, 0.15);
   border-radius: 4px;
 }
+
+.allDone {
+  background-color: #000;
+  background-image: url('../assets/thats-all-folks.gif');
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}

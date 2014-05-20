@@ -170,4 +170,10 @@ $('document').ready(function() {
     , noiseIntensity: 0});
   var pattern = t.generate(document.body.clientWidth, document.body.clientHeight);
   document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
+
+  if (completedExams.length === 7) {
+    $('.container').empty();
+    $('body').addClass('allDone');
+    document.body.setAttribute('style', 'background-image: ');
+  }
 });
