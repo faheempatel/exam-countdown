@@ -1,3 +1,0 @@
-location ~*  \.(jpg|jpeg|png|gif|ico|css|js)$ {
-   expires 365d;
-}}
