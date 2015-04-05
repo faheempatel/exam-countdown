@@ -1,42 +1,30 @@
 $('document').ready(function() {
   var json = {
-    "ecs524u": {
-      "name": "Internet Protocols and Applications",
-      "timestamp": "2014-04-28T10:00:00+01:00",
-      "venue": "John Orwell Sports Centre",
-      "googleMapsUrl": "https://goo.gl/maps/Cw8dM"
-    },
-    "ecs505u": {
-      "name": "Software Engineering",
-      "timestamp": "2014-05-06T14:30:00+01:00",
-      "venue": "Sports Hall"
-    },
-    "ecs518u": {
-      "name": "Operating Systems",
-      "timestamp": "2014-05-08T14:30:00+01:00",
-      "venue": "BANC-113"
-    },
-    "ecs522u": {
-      "name": "Graphical User Interfaces",
-      "timestamp": "2014-05-14T14:30:00+01:00",
-      "venue": "Octagon"
-    },
-    "ecs519u": {
-      "name": "Database Systems",
-      "timestamp": "2014-05-16T10:00:00+01:00",
+    "ecs637u": {
+      "name": "Digital Media and Social Networks",
+      "timestamp": "2015-04-28T14:30:00+01:00",
       "venue": "Stratford Town Hall",
       "googleMapsUrl": "https://goo.gl/maps/EcVmB"
     },
-    "ecs509u": {
-      "name": "Probability and Matrices",
-      "timestamp": "2014-05-19T14:30:00+01:00",
-      "venue": "John Orwell Sports Centre",
-      "googleMapsUrl": "https://goo.gl/maps/Cw8dM"
+    "ecs607u": {
+      "name": "Data Mining",
+      "timestamp": "2015-05-01T14:30:00+01:00",
+      "venue": "Law Suite"
     },
-    "ecs510u": {
-      "name": "Algorithms and Data Structures in an Object-Oriented Framework",
-      "timestamp": "2014-05-23T10:00:00+01:00",
-      "venue": "Octagon"
+    "ecs612u": {
+      "name": "Interaction Design",
+      "timestamp": "2015-05-06T14:30:00+01:00",
+      "venue": "Sports Hall"
+    },
+    "ecs639u": {
+      "name": "Web Programming",
+      "timestamp": "2015-05-14T10:00:00+01:00",
+      "venue": "Sports Hall"
+    },
+    "ecs624u": {
+      "name": "C++ for Image Processing",
+      "timestamp": "2015-05-28T10:00:00+01:00",
+      "venue": "Arts Pav"
     }
   };
 
@@ -146,8 +134,7 @@ $('document').ready(function() {
     exam.timeDifference = daysUntil(exam.timestamp);
     if (exam.timeDifference < 0) {
       completedExams.unshift(exam);
-    }
-    else if (nextUp) {
+    } else if (nextUp) {
       appendExam($('.next-up'), exam);
       nextUp = false;
     } else {
@@ -164,16 +151,14 @@ $('document').ready(function() {
     }
   }
 
-  var t = new Trianglify({
-      x_gradient: colorbrewer.BuPu[9]
-    , y_gradient: ['#7CA1FF', '#838eca']
-    , noiseIntensity: 0});
-  var pattern = t.generate(document.body.clientWidth, document.body.clientHeight);
-  document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
-
-  if (completedExams.length === 7) {
+  if (completedExams.length === 6) {
     $('.container').empty();
-    $('body').addClass('allDone');
+    $('body').append('<div class="gif"></div>');
+    $('body').append('<div class="message"></div>');
+    $('.message').append(
+        '<h1>Thanks!</h1>'
+      + '<p>Thanks for using the exam countdown</p>'
+    );
     document.body.setAttribute('style', 'background-image: ');
   }
 });
