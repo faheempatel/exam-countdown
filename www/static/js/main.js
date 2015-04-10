@@ -6,6 +6,12 @@ $('document').ready(function() {
       "venue": "Stratford Town Hall",
       "googleMapsUrl": "https://goo.gl/maps/EcVmB"
     },
+    "ecs613u": {
+      "name": "Advanced Database Systems",
+      "timestamp": "2015-04-29T14:30:00+01:00",
+      "venue": "Stratford Town Hall",
+      "googleMapsUrl": "https://goo.gl/maps/EcVmB"
+    },
     "ecs607u": {
       "name": "Data Mining",
       "timestamp": "2015-05-01T14:30:00+01:00",
@@ -16,18 +22,58 @@ $('document').ready(function() {
       "timestamp": "2015-05-06T14:30:00+01:00",
       "venue": "Sports Hall"
     },
+    "ecs610u": {
+      "name": "Computer Graphics",
+      "timestamp": "2015-05-12T14:30:00+01:00",
+      "venue": "Stratford Town Hall",
+      "googleMapsUrl": "https://goo.gl/maps/EcVmB"
+    },
+    "ecs621u": {
+      "name": "Software Risk Assessment",
+      "timestamp": "2015-05-13T10:00:00+01:00",
+      "venue": "Law Suite"
+    },
     "ecs639u": {
       "name": "Web Programming",
       "timestamp": "2015-05-14T10:00:00+01:00",
       "venue": "Sports Hall"
     },
+    "ecs634u": {
+      "name": "Algorithms and Complexity",
+      "timestamp": "2015-05-19T10:00:00+01:00",
+      "venue": "Arts Pavilion",
+      "googleMapsUrl": "https://goo.gl/maps/Tm7jZ"
+    },
+    "ecs631u": {
+      "name": "Computability",
+      "timestamp": "2015-05-20T14:30:00+01:00",
+      "venue": "Arts Pavilion",
+      "googleMapsUrl": "https://goo.gl/maps/Tm7jZ"
+    },
+    "ecs608u": {
+      "name": "Distributed Systems and Security",
+      "timestamp": "2015-05-21T14:30:00+01:00",
+      "venue": "Sports Hall"
+    },
+    "ecs640u": {
+      "name": "Big Data Processing",
+      "timestamp": "2015-05-26T10:00:00+01:00",
+      "venue": "John Orwell Sports Centre",
+      "googleMapsUrl": "https://goo.gl/maps/Cw8dM"
+    },
     "ecs624u": {
       "name": "C++ for Image Processing",
       "timestamp": "2015-05-28T10:00:00+01:00",
-      "venue": "Arts Pav"
+      "venue": "Arts Pavilion",
+      "googleMapsUrl": "https://goo.gl/maps/Tm7jZ"
+    },
+    "ecs629u": {
+      "name": "Artificial Intelligence",
+      "timestamp": "2015-05-29T10:00:00+01:00",
+      "venue": "BANC 113"
     }
   };
-
+         
   function daysUntil(timestamp) {
     // The number of milliseconds in one day
     var ONE_DAY = 1000 * 60 * 60 * 24;
